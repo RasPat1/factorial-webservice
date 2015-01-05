@@ -1,5 +1,5 @@
 <?php
-$db = new mysqli('localhost', 'root', '', 'factorial');
+$db = new mysqli('localhost', 'root', getenv('DBPW'), 'factorial');
 
 function calc_fac($num, $db) {
 	$qString = "Select * from factorial order by number Desc limit 1";
