@@ -7,6 +7,6 @@
     if ($res) {
       $resNum = mysqli_fetch_array($res);
       $resNum = $resNum['result'];
-      echo !empty($resNum) ? $resNum : 0;
+      echo !empty($resNum) ? $resNum : calc_fac($num);
     }
   }
