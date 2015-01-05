@@ -2,7 +2,7 @@
 $db = new mysqli('localhost', 'root', getenv('DBPW'), 'factorial');
 
 function calcFac($db, $num) {
-	$qString = "Select * from factorial order by number Desc limit 1";
+	$qString = "Select * from factorial where number < $num order by number desc limit 1";
 	$result = mysqli_query($db, $qString);
 	// $bigKnown = array('number' => 1, 'result' => 1);
 	// if (mysqli_num_rows($result) > 0) {
